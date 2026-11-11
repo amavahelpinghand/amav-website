@@ -25,15 +25,8 @@
   <footer class="footer"><div class="wrap footer-inner"><div><strong>AMAV A HELPING HAND LLC</strong><p>Multi-Service Solutions · Lawn Care. Logistics. Transportation.</p><p>© <span id="year">2026</span> AMAV A HELPING HAND LLC. All rights reserved.</p></div><a href="#home">Back to top ↑</a></div></footer>
   <script>
     document.getElementById('year').textContent=new Date().getFullYear();
-    document.getElementById('quoteForm').addEventListener('submit',function(event){
-      event.preventDefault();if(!this.reportValidity())return;
-      const get=id=>document.getElementById(id).value.trim();
-      const subject='AMAV Lawn-Care Estimate Request — '+get('town');
-      const body=['Hello AMAV,','',"I would like to request a lawn-care estimate.",'','Name: '+get('name'),'Email: '+get('email'),'Phone: '+(get('phone')||'Not provided'),'Property town: '+get('town'),'Service: '+get('service'),'','Property details / preferred schedule:',get('message')||'Not provided','','Thank you.'].join('\n');
-      const url='mailto:estimates@amavahelpinghand.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      document.getElementById('formStatus').textContent='Your email app should open with the prepared request. Please press Send there. If nothing opens, email estimates@amavahelpinghand.com directly.';
-      window.location.href=url;
-    });
+    document.getElementById('quoteForm'action="https://formspree.io/f/xdegodga"
+method="POST";
   </script>
 </body>
 </html>
